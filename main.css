@@ -1,0 +1,222 @@
+/* local fonts used*/
+@font-face {
+  font-family: Druk-Wide-Bold;
+  src: url(./Druk\ Wide\ Bold\ Regular.ttf);
+}
+
+@font-face {
+  font-family: Glacial;
+  src: url(./GlacialIndifference-Bold.otf);
+}
+
+@font-face {
+  font-family: Lemon;
+  src: url(./LEMONMILK-Light.otf);
+}
+
+::-webkit-scrollbar { display: none;}
+
+::selection { display: none;}
+
+button,
+.item {
+  background-color: azure;
+  font-family: Glacial;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  outline: none;
+  border: none;
+}
+
+:root {
+  --bg-color: rgb(4, 43, 171);
+  --txt-color: rgb(217, 232, 247);
+  --btn-txt-color: rgb(17, 38, 58);
+  --btn-color: rgb(193, 224, 247);
+
+  --second-bg-color: rgb(8, 46, 90);
+}
+
+body,
+main,
+header {
+  margin: 0;
+  min-height: 100dvh;
+}
+
+body {
+  background-color: var(--bg-color);
+}
+
+header {
+  font-family: Druk-Wide-Bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/*  for background image on hero section.*/
+
+body {
+  background-image: url(/wallpaperflare.com_wallpaper.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+
+  background-color: rgba(8, 8, 120, 0.532);
+  background-blend-mode: darken;
+}
+
+header h1 {
+  line-height: .9em;
+  text-align: center;
+  color: var(--txt-color);
+  font-size: clamp(2.4rem, 8vw, 10rem);
+  margin-bottom: 0.6em;
+}
+
+button {
+  background-color: var(--btn-color);
+  color: var(--btn-txt-color);
+  cursor: pointer;
+  padding: 0.3em 1em;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  border-radius: 10px;
+}
+
+section {
+  background-color: rgba(2, 91, 113, 0.42);
+  backdrop-filter: blur(5px);
+  border-top: 1px solid rgba(127, 188, 203, 0.162);
+  border-bottom: 1px solid rgba(127, 188, 203, 0.121);
+  color: var(--txt-color);
+  height: auto;
+  padding: 4em 2em;
+}
+
+section h2 {
+  font-family: Druk-Wide-Bold;
+  font-size: clamp(1.2rem, 8vw, 2.5rem);
+}
+
+.projects-wrap {
+  margin-top: 2em;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  place-content: center;
+  gap: 1em;
+}
+
+.item {
+  height: 300px;
+  font-size: 3rem;
+  color: white;
+  text-align: center;
+  align-content: center;
+  border-radius: 10px;
+  background-color: rgb(16, 147, 147);
+}
+
+/* for image */
+
+.two {
+  background-color: rgb(20, 20, 49);
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.two img {
+  width: 100%;
+  height: auto;
+}
+
+.paragraph-sect {
+  background-color: rgba(0, 0, 0, 0.347);
+  border: none;
+  padding: 3em 1.6em;
+}
+
+.paragraph-sect h1  {
+  font-family: Glacial;
+  margin-bottom: 14px;
+  font-size: clamp(2.5em, 4vw, 4rem);
+}
+
+.paragraph-sect p {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-transform: lowercase;
+  line-height: 1.7em;
+  font-size: clamp( 1.1rem, 4vw, 1.3rem);
+
+  }
+
+
+  footer {
+    font-family: Druk-Wide-Bold;
+    color: white;
+    width: 100%;
+    background-color: rgb(2, 22, 45);
+    height: auto;
+    position: relative;
+    bottom: 0;
+    padding: .8em;
+    margin: 0;
+    align-content: center;
+  }
+
+  footer h2 {
+    margin: 0;
+    font-size: clamp(2.5rem, 4vw, 6rem);
+  }
+
+  footer p {position: relative; right: 0; align-self: center; opacity: 70%; margin: 0; font-size: 10px;}
+
+/* ^
+   |
+mobile first design*/
+
+/* tablets (small)*/
+@media screen and (min-width: 600px) {
+
+  section {
+    padding:  3em 4em;
+  }
+
+  .item {
+    background-color: rgb(25, 135, 183);
+  }
+
+
+  .two img {
+    padding: 2em;
+    max-width: 60%;
+  }
+
+  .paragraph-sect {
+    padding: 3em 4em;
+  }
+}
+
+/* larger screens */
+@media screen and (min-width: 1440px) {
+  section {
+    padding: 2em 10em;
+  }
+
+  .two img {
+    padding: 3em;
+    max-width: 50%;
+  }
+
+
+  .paragraph-sect {
+    padding: 3em 10em;
+  }
+}
